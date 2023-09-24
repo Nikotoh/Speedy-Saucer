@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://ofrlvy64mqaq"]
+
+[ext_resource type="Script" path="res://Nodes/Level 1/level_1.gd" id="1_mrcoe"]
+[ext_resource type="Texture2D" uid="uid://dfbkcay8ylv4y" path="res://2D Art/purple.png" id="2_2w6p6"]
+[ext_resource type="PackedScene" uid="uid://d4d0qqmq5ckly" path="res://Nodes/Player/Player.tscn" id="3_ery6p"]
+[ext_resource type="PackedScene" uid="uid://bswbcn7ivbecl" path="res://Nodes/Maze.tscn" id="4_wjhu3"]
+[ext_resource type="PackedScene" uid="uid://c80qv0ndm83t8" path="res://Nodes/UI.tscn" id="4_x0g3m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vvgte"]
+font_size = 36
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_mrcoe")
+
+[node name="Graphics" type="Node" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Graphics"]
+layer = -10
+
+[node name="Background" type="TextureRect" parent="Graphics/CanvasLayer"]
+z_index = -100
+custom_minimum_size = Vector2(1152, 648)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2w6p6")
+stretch_mode = 1
+
+[node name="StartLabel" type="Label" parent="Graphics"]
+z_index = -10
+offset_left = 407.0
+offset_top = 261.0
+offset_right = 527.0
+offset_bottom = 319.0
+text = "START"
+label_settings = SubResource("LabelSettings_vvgte")
+
+[node name="EndLabel" type="Label" parent="Graphics"]
+z_index = -10
+offset_left = 3131.0
+offset_top = 239.0
+offset_right = 3251.0
+offset_bottom = 297.0
+text = "END"
+label_settings = SubResource("LabelSettings_vvgte")
+
+[node name="TutorialLabel" type="Label" parent="Graphics"]
+z_index = -10
+offset_left = 688.0
+offset_top = 256.0
+offset_right = 1351.0
+offset_bottom = 546.0
+text = "Rules: 
+- Use Arrow Keys or WASD to move
+- Go from START to the END
+- You will go back to the start if 
+you go outside of the maze!"
+label_settings = SubResource("LabelSettings_vvgte")
+
+[node name="Player" parent="." instance=ExtResource("3_ery6p")]
+position = Vector2(455, 75)
+
+[node name="UI" parent="Player" instance=ExtResource("4_x0g3m")]
+layer = 10
+visible = false
+
+[node name="Maze" parent="." instance=ExtResource("4_wjhu3")]
+z_index = -50
+
+[connection signal="body_exited" from="Maze" to="." method="_on_maze_body_exited"]
+
+[editable path="Player/UI"]

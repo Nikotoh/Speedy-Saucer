@@ -1,1 +1,12 @@
+Label
+Node
+Button
+Sprite2D
+CanvasLayer
+Polygon2D
+CollisionPolygon2D
+Area2D
+Camera2D
+CollisionShape2D
+RigidBody2D
 TextureRect

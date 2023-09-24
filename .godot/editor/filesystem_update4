@@ -1,2 +1,10 @@
-res://level_1.tscn
-res://Scenes/level_1.tscn
+res://Nodes/Player.tscn
+res://Nodes/level_1.tscn
+res://Nodes/Player/Player.tscn
+res://Nodes/Player/Player.gd
+res://Nodes/Level 1/level_1.tscn
+res://Nodes/Maze.tscn
+res://Nodes/Level 1/level_1.gd
+res://Nodes/UI.tscn
+res://Nodes/ReplayButton.gd
+res://Nodes/QuitButton.gd

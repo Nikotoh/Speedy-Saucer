@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://c80qv0ndm83t8"]
+
+[ext_resource type="Script" path="res://Nodes/ReplayButton.gd" id="1_34msj"]
+[ext_resource type="Texture2D" uid="uid://cu1205nslb43g" path="res://2D Art/replay_icon.png" id="1_dqnn8"]
+[ext_resource type="Texture2D" uid="uid://cxydhjg8bm0le" path="res://2D Art/shutdown_icon.png" id="2_jxbaf"]
+[ext_resource type="Script" path="res://Nodes/QuitButton.gd" id="3_h0ca0"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="ReplayButton" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_34msj")
+
+[node name="ReplayButton" type="Sprite2D" parent="ReplayButton"]
+position = Vector2(920, 83)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_dqnn8")
+
+[node name="QuitButton" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("3_h0ca0")
+
+[node name="QuitButton" type="Sprite2D" parent="QuitButton"]
+position = Vector2(1019, 83)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_jxbaf")

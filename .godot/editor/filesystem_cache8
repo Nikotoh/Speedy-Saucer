@@ -1,9 +1,18 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1695547022
-::res://Art/::1695547023
-darkPurple.png::CompressedTexture2D::2793099236346654373::1695546964::1695547023::1::::<><>::
-icon.svg::CompressedTexture2D::295141446975675315::1695539479::1695547023::1::::<><>::
-purple.png::CompressedTexture2D::7512881427146203966::1695546964::1695547023::1::::<><>::
-ufoGreen.png::CompressedTexture2D::677844542414772141::1695546964::1695547023::1::::<><>::
-::res://Scenes/::1695547024
-level_1.tscn::PackedScene::994018673826137056::1695547027::0::1::::<><>::
+::res://::1695551040
+README.md::TextFile::-1::1695547431::0::1::::<><>::
+::res://2D Art/::1695552124
+darkPurple.png::CompressedTexture2D::2793099236346654373::1695546964::1695548628::1::::<><>::
+icon.svg::CompressedTexture2D::295141446975675315::1695539479::1695548628::1::::<><>::
+purple.png::CompressedTexture2D::7512881427146203966::1695546964::1695548628::1::::<><>::
+replay_icon.png::CompressedTexture2D::6231977662020293738::1695552124::1695552125::1::::<><>::
+shutdown_icon.png::CompressedTexture2D::6436924972174199278::1695552124::1695552125::1::::<><>::
+ufoGreen.png::CompressedTexture2D::677844542414772141::1695546964::1695548628::1::::<><>::
+::res://Nodes/::1695551882
+Maze.tscn::PackedScene::3695301200976458935::1695551882::0::1::::<><>::uid://bf1863oeq8flt::::res://2D Art/darkPurple.png
+::res://Nodes/Level 1/::1695551882
+level_1.gd::GDScript::-1::1695551876::0::1::::<>Node2D<>::
+level_1.tscn::PackedScene::994018673826137056::1695551882::0::1::::<><>::res://Nodes/Level 1/level_1.gd<>uid://dfbkcay8ylv4y::::res://2D Art/purple.png<>uid://d4d0qqmq5ckly::::res://Nodes/Player/Player.tscn<>uid://bswbcn7ivbecl::::res://Nodes/Maze.tscn
+::res://Nodes/Player/::1695551882
+Player.gd::GDScript::-1::1695551876::0::1::::<>RigidBody2D<>::
+Player.tscn::PackedScene::9202479007044464294::1695551882::0::1::::<><>::uid://jwmaaw1chb14::::res://2D Art/ufoGreen.png<>res://Nodes/Player/Player.gd
